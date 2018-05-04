@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114154521522297796}
   - component: {fileID: 212853720045871548}
   - component: {fileID: 50292605640662912}
+  - component: {fileID: 95914998218485678}
   m_Layer: 0
   m_Name: Sombra
   m_TagString: Sombra
@@ -89,6 +90,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &95914998218485678
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993231756357984}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0784ae05285229241acba70fe3b77813, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114154521522297796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5019ce84d5902749915dcc4c1af90fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  smooth: 2
+  speed: 20
+  smooth: 0.1
 --- !u!212 &212853720045871548
 SpriteRenderer:
   m_ObjectHideFlags: 1
