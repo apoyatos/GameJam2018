@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class EnergyManager : MonoBehaviour {
 
+    public static EnergyManager instance;
+
     public int energiaInicial =10;
 
     int actual;
 
 	void Start () {
+        instance = this;
         actual = energiaInicial;
 	}
 

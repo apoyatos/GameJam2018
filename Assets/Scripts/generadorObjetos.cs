@@ -22,7 +22,7 @@ public class generadorObjetos : MonoBehaviour {
         Bounds limites = GetComponent<BoxCollider2D>().bounds;
         limiteIzquierdo = limites.min.x;
         limiteDerecho = limites.max.x;
-        Invoke("Crear", tiempoDeCreacionInicial);
+        Crear();
 	}
     void Crear()
     {

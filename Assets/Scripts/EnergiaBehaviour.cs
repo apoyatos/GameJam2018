@@ -2,23 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnergiaBehaviour : MonoBehaviour {
-
-    Collider2D colEner;
-    EnergyManager energyManager;
-
-
-	void Start ()
-    {
-        colEner = GetComponent<Collider2D>();
-	}
-
+public class EnergiaBehaviour : Caer {
    
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Luz")
         {
-            energyManager.SumaEnergia();
+            EnergyManager.instance.SumaEnergia();
             Destroy(gameObject);
         }
     }

@@ -22,7 +22,10 @@ public class Caer : ObjetoEscena {
     public void cambiarVelocidad(float velocidad)
     {
         velocidadCaida = velocidad;
-        rb2D.velocity = Vector2.down * velocidadCaida;
+        if (rb2D != null)
+        {
+            rb2D.velocity = Vector2.down * velocidadCaida;
+        }
     }
 
     //Cambia la velocidad del objeto a una velocidad aleatoria entre minimo y maximo.

@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movimiento : MonoBehaviour {
+public class Movimiento : ObjetoEscena {
 
     public float velocidad;
     public float fuerzaSalto;
 
-    EnergyManager energyManager;
     Rigidbody2D rb;
     int puedeSaltar=0;//0 en tierra 1 en el aire y puede saltar 2 no puede saltar
 
 
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
-        energyManager = FindObjectOfType<EnergyManager>();
 	}
 	
     void ControlJugador()
@@ -27,7 +25,7 @@ public class Movimiento : MonoBehaviour {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, fuerzaSalto));
             puedeSaltar += 1;
-           // energyManager.RestaEnergia();
+            EnergyManager.instance.RestaEnergia();
         }
        }
 
@@ -44,5 +42,9 @@ public class Movimiento : MonoBehaviour {
         {            
             puedeSaltar = 0;
         }
+    }
+    public override void Muerte()
+    {
+        Destroy(gameObject);
     }
 }

@@ -6,22 +6,16 @@ public class InteraccionSombra : MonoBehaviour {
 
     bool dentro;
     GameObject roca;
-    EnergyManager sombra;
-   
-    void Start()
-    {
-        sombra = GameObject.FindWithTag("IndicadorEnergia").GetComponent<EnergyManager>();
-    }
 
 	void Update () {
         if (Input.GetMouseButtonDown(0) && dentro)
         {
-            sombra.RestaEnergia();
+            EnergyManager.instance.RestaEnergia();
             Destroy(roca);
             GameManager.instance.SumaPuntos();
         }
         else if(Input.GetMouseButtonDown(0))
-            sombra.RestaEnergia();
+            EnergyManager.instance.RestaEnergia();
     }
 
     void OnTriggerEnter2D(Collider2D col)
