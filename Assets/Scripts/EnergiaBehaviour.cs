@@ -16,7 +16,7 @@ public class EnergiaBehaviour : MonoBehaviour {
    
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "JugadorLuz")
+        if(other.tag == "Luz")
         {
             energyManager.SumaEnergia();
             Destroy(gameObject);
