@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  smooth: 0.5
+  smooth: 2
 --- !u!23 &558838024
 MeshRenderer:
   m_ObjectHideFlags: 0
