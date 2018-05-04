@@ -11,10 +11,11 @@ public class MovimientoSombra : MonoBehaviour {
     
     Vector3 current;
 
-
+    Rigidbody2D rb2D;
 
 	void Start () {
         current = Vector3.zero;
+        rb2D = gameObject.GetComponent<Rigidbody2D>();
         
 	}
 
@@ -26,9 +27,9 @@ public class MovimientoSombra : MonoBehaviour {
         target = Camera.main.ScreenToWorldPoint(target);
 
 
-        
-        transform.position = Vector3.SmoothDamp(transform.position, target, ref current, speed, smooth); 
-        //transform.position = Vector3.Lerp(transform.position, Input.mousePosition, smooth);
+        Vector3 vel = rb2D.velocity;
+        rb2D.position = Vector3.SmoothDamp(transform.position, target, ref vel, smooth, speed);
+        rb2D.velocity = vel;
         
 
     }
