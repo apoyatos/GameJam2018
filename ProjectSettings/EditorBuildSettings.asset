@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puntuacion.unity
     guid: c72ea5ce88b4cb4499f4190086f66022
+  - enabled: 1
+    path: Assets/Scenes/Juego.unity
+    guid: 2f2b42f01cf551c4d8ad3a4fb0d84365
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: a2a58e7315b3c004ea555137194f8602

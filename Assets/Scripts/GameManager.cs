@@ -44,4 +44,18 @@ public class GameManager : MonoBehaviour {
     {
         puntuacion = puntuacion + 50;
     }
+
+    public int Puntuacion()
+    {
+        return puntuacion;
+    }
+
+    public void Cargajuego()
+    {
+        SceneManager.LoadScene("Juego");
+    }
+    public void CargaMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
