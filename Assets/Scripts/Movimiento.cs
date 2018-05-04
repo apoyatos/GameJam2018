@@ -7,6 +7,7 @@ public class Movimiento : MonoBehaviour {
     public float velocidad;
     public float fuerzaSalto;
 
+    EnergyManager energyManager;
     Rigidbody2D rb;
     bool tierra;
     int puedeSaltar=0;//0 en tierra 1 en el aire y puede saltar 2 no puede saltar
@@ -14,7 +15,7 @@ public class Movimiento : MonoBehaviour {
 
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
-        
+        energyManager = FindObjectOfType<EnergyManager>();
 	}
 	
     void ControlJugador()
@@ -27,7 +28,7 @@ public class Movimiento : MonoBehaviour {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, fuerzaSalto));
             puedeSaltar += 1;
-
+            energyManager.RestaEnergia();
         }
        }
 
