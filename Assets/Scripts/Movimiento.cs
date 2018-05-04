@@ -9,7 +9,6 @@ public class Movimiento : MonoBehaviour {
 
     EnergyManager energyManager;
     Rigidbody2D rb;
-    bool tierra;
     int puedeSaltar=0;//0 en tierra 1 en el aire y puede saltar 2 no puede saltar
 
 
@@ -28,7 +27,7 @@ public class Movimiento : MonoBehaviour {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, fuerzaSalto));
             puedeSaltar += 1;
-            energyManager.RestaEnergia();
+           // energyManager.RestaEnergia();
         }
        }
 
@@ -38,10 +37,11 @@ public class Movimiento : MonoBehaviour {
 	}
 
     private void OnCollisionEnter2D(Collision2D collision)
+        
     {
-        if (collision.collider.gameObject.CompareTag("Suelo"))
-        {
-            tierra = true;
+        
+        if (collision.collider.gameObject.CompareTag("Suelo")&& transform.position.y - collision.collider.transform.position.y >= 0)
+        {            
             puedeSaltar = 0;
         }
     }
