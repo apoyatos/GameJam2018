@@ -20,7 +20,16 @@ public class MovimientoSombra : MonoBehaviour {
 
     
     void Update () {
-        Vector3 targetPosition = new Vector3(Input.mousePosition.x - transform.position.x, Input.mousePosition.y- transform.position.y,0);
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref current, speed, smooth); ;
-	}
+
+        Vector3 target = Input.mousePosition;
+        target.z = 10;
+        target = Camera.main.ScreenToWorldPoint(target);
+
+
+        
+        transform.position = Vector3.SmoothDamp(transform.position, target, ref current, speed, smooth); 
+        //transform.position = Vector3.Lerp(transform.position, Input.mousePosition, smooth);
+        
+
+    }
 }
