@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnergyManager : MonoBehaviour {
 
@@ -8,11 +9,13 @@ public class EnergyManager : MonoBehaviour {
 
     public int energiaInicial =10;
 
-    int actual;
+    Slider barraEnergia;
+   public  int actual;
 
 	void Start () {
         instance = this;
         actual = energiaInicial;
+        barraEnergia = FindObjectOfType<Slider>();
 	}
 
 
@@ -33,4 +36,11 @@ public class EnergyManager : MonoBehaviour {
     {
         return actual;
     }
+
+    private void Update()
+    {
+        barraEnergia.value = actual;
+    }
+
+
 }
