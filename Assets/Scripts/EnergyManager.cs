@@ -15,7 +15,12 @@ public class EnergyManager : MonoBehaviour {
 
     public void RestaEnergia()
     {
-        actual--;
+        if (actual > 0)
+            actual--;
+
+        else
+            GameManager.instance.FinPartida();
+
     }
     public void SumaEnergia()
     {
