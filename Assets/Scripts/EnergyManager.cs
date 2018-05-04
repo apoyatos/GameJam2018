@@ -16,6 +16,7 @@ public class EnergyManager : MonoBehaviour {
         instance = this;
         actual = energiaInicial;
         barraEnergia = FindObjectOfType<Slider>();
+      
 	}
 
 
