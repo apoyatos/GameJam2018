@@ -18,6 +18,7 @@ public class InteraccionSombra : MonoBehaviour {
         {
             sombra.RestaEnergia();
             Destroy(roca);
+            GameManager.instance.SumaPuntos();
         }
         else if(Input.GetMouseButtonDown(0))
             sombra.RestaEnergia();
