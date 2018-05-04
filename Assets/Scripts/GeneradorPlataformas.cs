@@ -10,9 +10,7 @@ public class GeneradorPlataformas : MonoBehaviour {
     public float tiempoDeCreacionInicial;
     public float tiempoMinimo;
     public float aceleracionTiempoPorInvocacion;
-    public float velocidadInicial;
-    public float aceleracionVelocidadPorInvocacion;
-    public float velocidadMaxima;
+    public float distanciaEntrePlataformas;
     public Plataforma objeto;
 
     Vector2[] posiciones;
@@ -69,14 +67,14 @@ public class GeneradorPlataformas : MonoBehaviour {
         {
             todasLasPlataformas.Add(aux2);
         }
-
-        float velocidad = Mathf.Min(velocidadInicial + aceleracionVelocidadPorInvocacion * numeroInvocaciones,velocidadMaxima);
+        float tiempo = Mathf.Max(tiempoDeCreacionInicial - numeroInvocaciones * aceleracionTiempoPorInvocacion, tiempoMinimo);
+        float velocidad = distanciaEntrePlataformas/tiempo;
         foreach (Plataforma item in todasLasPlataformas)
         {
             item.velocidadCaida = velocidad;
         }
 
-        Invoke("GenerarPlataformas", Mathf.Max(tiempoDeCreacionInicial - numeroInvocaciones * aceleracionTiempoPorInvocacion, tiempoMinimo));
+        Invoke("GenerarPlataformas",tiempo );
         numeroInvocaciones++;
     }
 
