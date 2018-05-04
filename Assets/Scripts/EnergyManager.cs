@@ -8,7 +8,7 @@ public class EnergyManager : MonoBehaviour {
 
     int actual;
 
-	void awake () {
+	void Start () {
         actual = energiaInicial;
 	}
 

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Sombra
   - Luz
+  - Roca
+  - IndicadorEnergia
   layers:
   - Default
   - TransparentFX

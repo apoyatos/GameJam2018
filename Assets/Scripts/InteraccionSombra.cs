@@ -4,13 +4,41 @@ using UnityEngine;
 
 public class InteraccionSombra : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+    bool dentro;
+    GameObject roca;
+    EnergyManager sombra;
+   
+    void Start()
+    {
+        sombra = GameObject.FindWithTag("IndicadorEnergia").GetComponent<EnergyManager>();
+    }
+
 	void Update () {
-		
-	}
+        if (Input.GetMouseButtonDown(0) && dentro)
+        {
+            sombra.RestaEnergia();
+            Destroy(roca);
+        }
+        else if(Input.GetMouseButtonDown(0))
+            sombra.RestaEnergia();
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Roca") && !dentro)
+        {
+           roca = col.gameObject;
+           dentro = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("Roca"))
+        {
+            roca = null;
+            dentro = false;
+        }
+    }
+
 }
