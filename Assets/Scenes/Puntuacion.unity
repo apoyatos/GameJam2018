@@ -950,13 +950,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b303c242efa194083689996045bc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ejemplo: {fileID: 0}
-  musicaJuego: {fileID: 0}
+  ejemplo: {fileID: 82255618075490080, guid: a310ab6764d51b54f9f2c24ece36bc05, type: 2}
+  musicaJuego: {fileID: 8300000, guid: cfda96678797408488eb62330ba2548f, type: 3}
   volumenMusicaJuego: 0
-  musicaMenu: {fileID: 0}
-  volumenMusicaMenu: 0
-  musicaPuntuacion: {fileID: 0}
-  volumenMusicaPuntuacion: 0
 --- !u!4 &1748667409
 Transform:
   m_ObjectHideFlags: 0

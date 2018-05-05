@@ -228,6 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1c40bd33aa4284094605befde1d0cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rocaSonido: {fileID: 8300000, guid: e080352a1488c4746b773fdd8088f015, type: 3}
+  rocaVolumen: 3
 --- !u!114 &114781501857614720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -241,8 +243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 7
   fuerzaSalto: 550
-  sonidoSalto: {fileID: 0}
-  volumenSalto: 0
+  sonidoSalto: {fileID: 8300000, guid: 111e57afaf53b6e4cb1f1b707fe47423, type: 3}
+  volumenSalto: 2
 --- !u!212 &212811014821712744
 SpriteRenderer:
   m_ObjectHideFlags: 1

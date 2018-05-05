@@ -20,11 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4592312607157376}
   - component: {fileID: 114427489249912486}
-  - component: {fileID: 61945554873509878}
   - component: {fileID: 114154521522297796}
   - component: {fileID: 212853720045871548}
   - component: {fileID: 50292605640662912}
   - component: {fileID: 95914998218485678}
+  - component: {fileID: 114598793050922914}
+  - component: {fileID: 58064499320154456}
   m_Layer: 0
   m_Name: Sombra
   m_TagString: Sombra
@@ -65,8 +66,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61945554873509878
-BoxCollider2D:
+--- !u!58 &58064499320154456
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -78,18 +79,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.5}
-    newSize: {x: 0.4, y: 0.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.75
 --- !u!95 &95914998218485678
 Animator:
   serializedVersion: 3
@@ -118,6 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60050afb0d1034140b5f0932c226c383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rocaSonido: {fileID: 8300000, guid: 37958442a09ee2f458d454e8dfcab3a7, type: 3}
+  rocaVolumen: 3
+  sombraSonido: {fileID: 8300000, guid: 8228407c6e4eb274ab4cd48019654f34, type: 3}
+  sombraVolumen: 3
 --- !u!114 &114427489249912486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -131,6 +126,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   smooth: 0.1
+--- !u!114 &114598793050922914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993231756357984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd37bf9930c2c2b47b224c93712f884b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212853720045871548
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -30,8 +30,5 @@ public class MovimientoSombra : MonoBehaviour {
         Vector3 vel = rb2D.velocity;
         rb2D.position = Vector3.SmoothDamp(transform.position, target, ref vel, smooth, speed);
         rb2D.velocity = vel;
-
-        animacion.SetFloat("x", vel.x);
-        animacion.SetFloat("y", vel.y);
     }
 }

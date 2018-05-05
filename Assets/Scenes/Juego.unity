@@ -723,22 +723,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &959157394 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1993231756357984, guid: 007b72c40518ac64c9f225790fa3fc03,
-    type: 2}
-  m_PrefabInternal: {fileID: 458748847}
---- !u!114 &959157395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 959157394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd37bf9930c2c2b47b224c93712f884b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1277413628
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,13 +928,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b303c242efa194083689996045bc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ejemplo: {fileID: 0}
-  musicaJuego: {fileID: 0}
-  volumenMusicaJuego: 0
-  musicaMenu: {fileID: 0}
-  volumenMusicaMenu: 0
-  musicaPuntuacion: {fileID: 0}
-  volumenMusicaPuntuacion: 0
+  ejemplo: {fileID: 82255618075490080, guid: a310ab6764d51b54f9f2c24ece36bc05, type: 2}
+  musicaJuego: {fileID: 8300000, guid: cfda96678797408488eb62330ba2548f, type: 3}
+  volumenMusicaJuego: 5
 --- !u!4 &1382423884
 Transform:
   m_ObjectHideFlags: 0

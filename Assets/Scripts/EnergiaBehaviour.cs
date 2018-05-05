@@ -11,9 +11,9 @@ public class EnergiaBehaviour : Caer {
     {
         if(other.tag == "Luz")
         {
-        SoundManager.instance.ReproducirSonido(sonidoEnergia, volumenEnergia);
+        SoundManager.instance.ReproducirSonido(sonidoEnergia, volumenEnergia).MoveNext();
         EnergyManager.instance.SumaEnergia();
-            Destroy(gameObject);
+        Destroy(gameObject);
         }
     }
 

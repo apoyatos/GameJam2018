@@ -159,7 +159,7 @@ MonoBehaviour:
   velocidadCaida: 0
   tempDestruccion: 3
   alpha: {r: 0, g: 0, b: 0, a: 0}
-  sonidoDesvanecerse: {fileID: 0}
+  sonidoDesvanecerse: {fileID: 8300000, guid: e25aa8700e5cfd14489e337eec1cfed9, type: 3}
   volumenDesvanecerse: 0
 --- !u!114 &114125993317465808
 MonoBehaviour:

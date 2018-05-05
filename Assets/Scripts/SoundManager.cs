@@ -9,10 +9,6 @@ public class SoundManager : MonoBehaviour {
     public AudioSource ejemplo;
     public AudioClip musicaJuego;
     public float volumenMusicaJuego;
-    public AudioClip musicaMenu;
-    public float volumenMusicaMenu;
-    public AudioClip musicaPuntuacion;
-    public float volumenMusicaPuntuacion;
 
     AudioSource musica;
 
@@ -25,33 +21,21 @@ public class SoundManager : MonoBehaviour {
         }
         else
             Destroy(gameObject);
-        instance.Iniciar();
+        ReproducirMusica(musicaJuego, volumenMusicaJuego);
+
     }
 
-    void Iniciar()
-    {
-        switch (SceneManager.GetActiveScene().name)
-        {
-            case "Juego":
-                ReproducirMusica(musicaJuego, volumenMusicaJuego);
-                break;
-            case "Menu":
-                ReproducirMusica(musicaMenu, volumenMusicaMenu);
-                break;
-            case "Puntuacion":
-                ReproducirMusica(musicaPuntuacion, volumenMusicaPuntuacion);
-                break;
-        }
-    }
         
     void ReproducirMusica(AudioClip sonido, float volumen)
     {
-        if(musica!=null)
-            Destroy(musica.gameObject);
         musica = Instantiate(ejemplo);
         musica.loop = true;
         musica.volume = volumenMusicaJuego;
+        musica.clip = sonido;
         musica.Play();
+        DontDestroyOnLoad(musica);
+        
+        
     }
 
 

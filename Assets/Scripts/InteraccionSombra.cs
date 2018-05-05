@@ -6,16 +6,34 @@ public class InteraccionSombra : MonoBehaviour {
 
     bool dentro;
     GameObject roca;
+    public AudioClip rocaSonido;
+    public float rocaVolumen;
+    public AudioClip sombraSonido;
+    public float sombraVolumen;
 
-	void Update () {
-        if (Input.GetMouseButtonDown(0) && dentro)
+    IEnumerator rocaSon;
+    IEnumerator SombraSon;
+
+    void Start()
+    {
+        rocaSon = SoundManager.instance.ReproducirSonido(rocaSonido, rocaVolumen);
+        SombraSon = SoundManager.instance.ReproducirSonido(sombraSonido, sombraVolumen);
+    }
+
+    void Update () {
+        if (Input.GetMouseButtonDown(0))
         {
             EnergyManager.instance.RestaEnergia();
-            Destroy(roca);
-            GameManager.instance.SumaPuntos();
+            SombraSon.MoveNext();
+            if (dentro)
+            {
+                Destroy(roca);
+                rocaSon.MoveNext();
+                GameManager.instance.SumaPuntos();
+
+            }
         }
-        else if(Input.GetMouseButtonDown(0))
-            EnergyManager.instance.RestaEnergia();
+           
     }
 
     void OnTriggerEnter2D(Collider2D col)
