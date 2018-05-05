@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoDeCreacionInicial: 3
-  tiempoMinimo: 0.1
+  tiempoMinimo: 1
   porcentajeHastaAlcanzarElNumeroDeInvoaciones: 0.9
   numeroDeInvocacionesHastaAlcanzarElPorcentaje: 50
   distanciaEntrePlataformas: 4
@@ -4342,11 +4342,6 @@ Prefab:
     - target: {fileID: 4061097128430624, guid: 3dd937c720ba49c408f71fd72629a925, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114118529170551898, guid: 3dd937c720ba49c408f71fd72629a925,
-        type: 2}
-      propertyPath: velocidadCaida
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3dd937c720ba49c408f71fd72629a925, type: 2}
