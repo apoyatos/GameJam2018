@@ -2,39 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
 public class generadorObjetos : MonoBehaviour {
 
-    public float tiempoDeCreacionInicial;
-    public float tiempoMinimo;
-    public float aceleracionTiempoPorInvocacion;
-    public float velocidadInicialMedia;
-    public float desviacionVelocidad;
-    public float velocidadMaxima;
-    public float aceleracionVelociadPorInvocacion;
+    static public generadorObjetos[] instance;
+
+    public float porcentajeDesviacionVelocidad;
+    public float porcentajeDesviacionTiempo;
+    public float multiplicadorFrecuencia;
     public Caer objeto;
 
     float limiteIzquierdo, limiteDerecho;
-    ulong numeroInvocaciones;
+    Vector2 posicionSuperior;
     
-	void Start () {
-        numeroInvocaciones = 0;
-        Bounds limites = GetComponent<BoxCollider2D>().bounds;
-        limiteIzquierdo = limites.min.x;
-        limiteDerecho = limites.max.x;
-        Crear();
+	void Awake () {
+        instance = GameObject.FindObjectsOfType<generadorObjetos>();
+        BoxCollider2D limites = Instantiate(objeto).GetComponent<BoxCollider2D>();
+        limiteIzquierdo = Camera.main.ViewportToWorldPoint(Camera.main.rect.min).x + limites.bounds.size.x;
+        limiteDerecho = Camera.main.ViewportToWorldPoint(Camera.main.rect.max).x - limites.bounds.size.x;
+        posicionSuperior = Camera.main.ViewportToWorldPoint(Camera.main.rect.max);
+        posicionSuperior.y += limites.bounds.size.y;
+        Destroy(limites.gameObject);
 	}
-    void Crear()
+    public void GenerarObjeto()
     {
         Caer aux = Instantiate(objeto);
-        float velocidadAuxiliar = Mathf.Min(velocidadInicialMedia + numeroInvocaciones * aceleracionTiempoPorInvocacion, velocidadMaxima);
-        aux.velocidadCaida = Random.Range(velocidadAuxiliar -desviacionVelocidad, velocidadAuxiliar + desviacionVelocidad);
-        Vector2 auxiliar = transform.position;
+        float velocidadAuxiliar = GeneradorPlataformas.instance.distanciaEntrePlataformas/GeneradorPlataformas.instance.Tiempo()*Random.Range(1f-porcentajeDesviacionVelocidad,1f+porcentajeDesviacionVelocidad);
+        aux.cambiarVelocidad(velocidadAuxiliar);
+        Vector2 auxiliar = posicionSuperior;
         auxiliar.x = Random.Range(limiteIzquierdo, limiteDerecho);
         objeto.transform.position = auxiliar;
-        if (numeroInvocaciones != ulong.MaxValue)
-            numeroInvocaciones++;
-        Invoke("Crear", 
-            Mathf.Max(tiempoMinimo, tiempoDeCreacionInicial - aceleracionTiempoPorInvocacion * numeroInvocaciones));
+        Invoke("GenerarObjeto", 
+            GeneradorPlataformas.instance.Tiempo()/multiplicadorFrecuencia*Random.Range(1f-porcentajeDesviacionTiempo,1f+porcentajeDesviacionTiempo));
     }
 }
