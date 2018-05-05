@@ -16,7 +16,7 @@ public class generadorObjetos : MonoBehaviour {
     
 	void Awake () {
         instance = GameObject.FindObjectsOfType<generadorObjetos>();
-        BoxCollider2D limites = Instantiate(objeto).GetComponent<BoxCollider2D>();
+        Collider2D limites = Instantiate(objeto).GetComponent<Collider2D>();
         limiteIzquierdo = Camera.main.ViewportToWorldPoint(Camera.main.rect.min).x + limites.bounds.size.x;
         limiteDerecho = Camera.main.ViewportToWorldPoint(Camera.main.rect.max).x - limites.bounds.size.x;
         posicionSuperior = Camera.main.ViewportToWorldPoint(Camera.main.rect.max);
