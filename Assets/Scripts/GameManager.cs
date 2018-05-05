@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour {
     {
         puntuacion = 0;
         tiempo = Time.time;
+        Cursor.visible = false;
     }
 
     public void FinPartida()

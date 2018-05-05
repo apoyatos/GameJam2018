@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe6407f9ccaba0489a933bdedb16823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energiaInicial: 10
+  energiaInicial: 100
   actual: 0
 --- !u!4 &23796974
 Transform:
@@ -397,9 +397,9 @@ MonoBehaviour:
   tiempoDeCreacionInicial: 5
   tiempoMinimo: 2
   aceleracionTiempoPorInvocacion: 1
-  velocidadInicialMedia: 10
+  velocidadInicialMedia: 5
   desviacionVelocidad: 1
-  velocidadMaxima: 100
+  velocidadMaxima: 10
   aceleracionVelociadPorInvocacion: 1
   objeto: {fileID: 1734659774}
 --- !u!61 &365451210
@@ -482,28 +482,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 007b72c40518ac64c9f225790fa3fc03, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &569923930 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1993231756357984, guid: 007b72c40518ac64c9f225790fa3fc03,
-    type: 2}
-  m_PrefabInternal: {fileID: 458748847}
---- !u!95 &569923935
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 569923930}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0784ae05285229241acba70fe3b77813, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &715770170
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,8 +592,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1277413631}
-  - component: {fileID: 1277413630}
   - component: {fileID: 1277413629}
+  - component: {fileID: 1277413630}
   m_Layer: 1
   m_Name: GeneradorSuelo
   m_TagString: Untagged
@@ -656,13 +634,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1277413628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47db6c7b7f74e1c42b1cafe54e82aad0, type: 3}
+  m_Script: {fileID: 11500000, guid: ddb2945b91ed16c4ab73a506251ad474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoDeCreacionInicial: 2
-  tiempoMinimo: 0.5
-  aceleracionTiempoPorInvocacion: 1
-  distanciaEntrePlataformas: 3
+  tiempoDeCreacionInicial: 3
+  tiempoMinimo: 0.1
+  porcentajeHastaAlcanzarElNumeroDeInvoaciones: 0.9
+  numeroDeInvocacionesHastaAlcanzarElPorcentaje: 50
+  distanciaEntrePlataformas: 4
   objeto: {fileID: 114118529170551898, guid: 3dd937c720ba49c408f71fd72629a925, type: 2}
 --- !u!4 &1277413631
 Transform:
@@ -4186,9 +4165,9 @@ MonoBehaviour:
   tiempoDeCreacionInicial: 2
   tiempoMinimo: 5
   aceleracionTiempoPorInvocacion: 1
-  velocidadInicialMedia: 10
+  velocidadInicialMedia: 5
   desviacionVelocidad: 1
-  velocidadMaxima: 100
+  velocidadMaxima: 10
   aceleracionVelociadPorInvocacion: 1
   objeto: {fileID: 1675788960}
 --- !u!61 &1329847583
