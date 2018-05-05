@@ -9,25 +9,28 @@ public class Movimiento : ObjetoEscena {
 
     Rigidbody2D rb;
     int puedeSaltar=0;//0 en tierra 1 en el aire y puede saltar 2 no puede saltar
-
+    Animator animaciones;
 
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
+        animaciones = GetComponent<Animator>();
 	}
 	
     void ControlJugador()
     {
 
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * velocidad, rb.velocity.y);
-
+        animaciones.SetFloat("x", rb.velocity.x);
         if (Input.GetKeyDown(KeyCode.W) && puedeSaltar < 2)
         {
+            animaciones.SetBool("salto", true);
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, fuerzaSalto));
             puedeSaltar += 1;
             EnergyManager.instance.RestaEnergia();
         }
-       }
+        
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -41,6 +44,7 @@ public class Movimiento : ObjetoEscena {
         if (collision.collider.gameObject.CompareTag("Suelo")&& transform.position.y - collision.collider.transform.position.y >= 0)
         {            
             puedeSaltar = 0;
+            animaciones.SetBool("salto", false);
         }
     }
     public override void Muerte()
