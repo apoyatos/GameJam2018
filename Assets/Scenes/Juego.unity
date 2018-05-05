@@ -380,8 +380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9f4e7e4232a9f40a565a2ef01738b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  porcentajeDesviacionVelocidad: 1
-  porcentajeDesviacionTiempo: 3
+  porcentajeDesviacionVelocidad: 0.2
+  porcentajeDesviacionTiempo: 0.3
   multiplicadorFrecuencia: 2
   objeto: {fileID: 114418605163703038, guid: ed9ca5a42f6d83e42a7bb133d7362147, type: 2}
 --- !u!61 &365451210
@@ -875,6 +875,11 @@ Prefab:
         type: 2}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 198559023120936454, guid: 4198a787c0beb12409eed82a6d6c5ab1,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198559023120936454, guid: 4198a787c0beb12409eed82a6d6c5ab1,
         type: 2}
