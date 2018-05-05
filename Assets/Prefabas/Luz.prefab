@@ -131,6 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 7
   fuerzaSalto: 550
+  sonidoSalto: {fileID: 0}
+  volumenSalto: 0
 --- !u!212 &212811014821712744
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -165,7 +167,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1a35bf76ced306b4285c69893781c07d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30d413c04c749b544aedee78271070be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

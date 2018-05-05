@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 568e65f133f32ce46813b2c45b9e0129
-timeCreated: 1525480635
+guid: cd71ad93abe64bf4498fc3320e4dcb78
+timeCreated: 1525506958
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PJSombraBajando_0
-    21300002: PJSombraBajando_1
-    21300004: PJSombraBajando_2
+    21300000: PJLuzSaltoLateralAzul1_0
+    21300002: PJLuzSaltoLateralAzul1_1
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -83,41 +82,27 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PJSombraBajando_0
+      name: PJLuzSaltoLateralAzul1_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 0
-        width: 37
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PJSombraBajando_1
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 0
-        width: 37
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: PJSombraBajando_2
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 0
+        x: 0
+        y: 5
         width: 39
-        height: 51
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PJLuzSaltoLateralAzul1_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 5
+        width: 39
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
