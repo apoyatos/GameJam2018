@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: 4ba2de75a54002a4fa9ba8e7499f9bc6
-timeCreated: 1525480572
+guid: 8c2e06dd573e27448859b7250395e902
+timeCreated: 1525483470
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PJLuzAndar_0
-    21300002: PJLuzAndar_1
+    21300000: PJSombraLateral (1)_0
+    21300002: PJSombraLateral (1)_3
+    21300004: PJSombraLateral (1)_4
+    21300006: PJSombraLateral (1)_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -48,7 +50,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 150
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -82,29 +84,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PJLuzAndar_0
+      name: PJSombraLateral (1)_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 7
-        width: 38
-        height: 41
+        x: 0
+        y: 5
+        width: 295
+        height: 245
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PJLuzAndar_1
+      name: PJSombraLateral (1)_3
       rect:
         serializedVersion: 2
-        x: 41
-        y: 7
-        width: 38
-        height: 42
+        x: 605
+        y: 5
+        width: 290
+        height: 250
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PJSombraLateral (1)_4
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 23
+        width: 290
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
