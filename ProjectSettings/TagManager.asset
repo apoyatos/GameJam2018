@@ -8,6 +8,9 @@ TagManager:
   - Luz
   - Roca
   - IndicadorEnergia
+  - Suelo
+  - Pies
+  - Cabeza
   layers:
   - Default
   - TransparentFX

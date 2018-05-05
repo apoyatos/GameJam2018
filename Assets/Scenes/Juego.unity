@@ -343,14 +343,50 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 212811014821712744, guid: 57b95d27c9feacd47967a9222d8df9af,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 30d413c04c749b544aedee78271070be,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57b95d27c9feacd47967a9222d8df9af, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &261406300
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4772023621196130, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.3343382
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772023621196130, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772023621196130, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772023621196130, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772023621196130, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772023621196130, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772023621196130, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4772023621196130, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &365451208
 GameObject:
@@ -767,7 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d51ee1bd24cc984abdf3377447c29c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probabilidadNube: 0.1
+  probabilidadNube: 0.25
   tiempoDeCreacionInicial: 2
   tiempoMinimo: 1
   porcentajeHastaAlcanzarElNumeroDeInvoaciones: 0.9
