@@ -10,13 +10,12 @@ public class MovimientoSombra : MonoBehaviour {
 
     
     Vector3 current;
-    Animator animacion;
     Rigidbody2D rb2D;
 
 	void Start () {
         current = Vector3.zero;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-        animacion = GetComponent<Animator>();
+
 	}
 
     
