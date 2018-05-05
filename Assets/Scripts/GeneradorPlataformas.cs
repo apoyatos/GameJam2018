@@ -106,7 +106,7 @@ public class GeneradorPlataformas : MonoBehaviour {
         Vector2 vectorAbajo = Vector2.down * distanciaEntrePlataformas;
         int i = 1;
         float distanciaMaxima = Camera.main.ViewportToWorldPoint(Camera.main.rect.max).y - Camera.main.ViewportToWorldPoint(Camera.main.rect.min).y;
-        while (distanciaEntrePlataformas*i<distanciaMaxima)
+        while (distanciaEntrePlataformas*i<distanciaMaxima-distanciaEntrePlataformas)
         {
             Plataforma aux1, aux2 = null;
 
@@ -142,12 +142,19 @@ public class GeneradorPlataformas : MonoBehaviour {
                 todasLasPlataformas.Add(aux2);
             }
             i++;
-
-            foreach (Plataforma item in todasLasPlataformas)
-            {
-                item.cambiarVelocidad(0f);
-            }
         }
+
+        todasLasPlataformas.Add(Instantiate(objeto, posiciones[1] + vectorAbajo * i, Quaternion.identity));
+
+        //posicionar al jugador
+        Transform jugador = GameObject.FindGameObjectWithTag("Luz").transform;
+        jugador.position = posiciones[1] + vectorAbajo * i + Vector2.down*(jugador.GetComponent<Collider2D>().bounds.min.y - jugador.GetComponent<Collider2D>().bounds.max.y);
+
+        foreach (Plataforma item in todasLasPlataformas)
+        {
+            item.cambiarVelocidad(0f);
+        }
+
     }
 
     public void EliminarPlataforma(Plataforma plataforma)
