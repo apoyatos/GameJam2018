@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class PlatNubeDetecta: MonoBehaviour {
 
+    public Collider2D colisionPlataforma;
+
     bool Atravesado;
-    Collider2D colisionPlataforma;
     Collider2D colisionActivacol;
 
 	void Start ()
     {
-        colisionPlataforma = GetComponentInParent<Collider2D>();
+        
         colisionActivacol = GetComponent<Collider2D>();
         colisionPlataforma.enabled = true;
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.tag == "JugadorLuz")
+        if (other.tag == "Luz")
         {
             colisionPlataforma.enabled = false;
         }
@@ -25,7 +26,7 @@ public class PlatNubeDetecta: MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag == "JugadorLuz")
+        if(other.tag == "Luz")
         {
             colisionPlataforma.enabled = true;
         }

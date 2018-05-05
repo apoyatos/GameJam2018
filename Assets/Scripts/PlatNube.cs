@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatNube : MonoBehaviour {
+public class PlatNube : Plataforma {
 
 
     
     public float tempDestruccion = 3f;
-
-    SpriteRenderer sprt;
-    Color alpha;
+    Color platColor;
+    
+    public Color alpha;
 
 	// Use this for initialization
 	void Start ()
     {
-        alpha = sprt.GetComponent<SpriteRenderer>().color;
-        sprt = GetComponent<SpriteRenderer>();
+        alpha = GetComponent<SpriteRenderer>().color;
+        alpha.a = 1;
+        
+        
 	}
 	
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.collider.tag == "JugadorLuz")
+        if(col.collider.tag == "Luz")
         {
             Reducir();
         }
@@ -28,15 +30,15 @@ public class PlatNube : MonoBehaviour {
 
     void Reducir()
     {
-        
-        alpha.a--;
-
-        if(alpha.a <= 0)
+       
+        alpha.a = alpha.a - Time.deltaTime;
+        GetComponent<SpriteRenderer>().color = new Color(alpha.r, alpha.g, alpha.b, alpha.a);
+        if (alpha.a <= 0)
         {
             Destroy(gameObject);
         }else
         {
-            Invoke("Reducir", tempDestruccion / 255);
+            Invoke("Reducir", Time.deltaTime);
         }
     }
 
