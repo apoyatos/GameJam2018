@@ -397,9 +397,9 @@ MonoBehaviour:
   tiempoDeCreacionInicial: 5
   tiempoMinimo: 2
   aceleracionTiempoPorInvocacion: 1
-  velocidadInicialMedia: 10
+  velocidadInicialMedia: 5
   desviacionVelocidad: 1
-  velocidadMaxima: 100
+  velocidadMaxima: 10
   aceleracionVelociadPorInvocacion: 1
   objeto: {fileID: 1734659774}
 --- !u!61 &365451210
@@ -637,11 +637,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb2945b91ed16c4ab73a506251ad474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoDeCreacionInicial: 5
-  tiempoMinimo: 1
-  porcentajeHastaAlcanzarElNumeroDeInvoaciones: 0.99
-  numeroDeInvocacionesHastaAlcanzarElPorcentaje: 100
-  distanciaEntrePlataformas: 2
+  tiempoDeCreacionInicial: 3
+  tiempoMinimo: 0.1
+  porcentajeHastaAlcanzarElNumeroDeInvoaciones: 0.9
+  numeroDeInvocacionesHastaAlcanzarElPorcentaje: 50
+  distanciaEntrePlataformas: 4
   objeto: {fileID: 114118529170551898, guid: 3dd937c720ba49c408f71fd72629a925, type: 2}
 --- !u!4 &1277413631
 Transform:
@@ -734,9 +734,9 @@ MonoBehaviour:
   tiempoDeCreacionInicial: 2
   tiempoMinimo: 5
   aceleracionTiempoPorInvocacion: 1
-  velocidadInicialMedia: 10
+  velocidadInicialMedia: 5
   desviacionVelocidad: 1
-  velocidadMaxima: 100
+  velocidadMaxima: 10
   aceleracionVelociadPorInvocacion: 1
   objeto: {fileID: 1675788960}
 --- !u!61 &1329847583
