@@ -1,11 +1,13 @@
 fileFormatVersion: 2
-guid: 4ba2de75a54002a4fa9ba8e7499f9bc6
-timeCreated: 1525480572
+guid: c6278ceda3f46b44e80df7b07552c91e
+timeCreated: 1525535205
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PJLuzAndar_0
-    21300002: PJLuzAndar_1
+    21300000: Fuego 1_0
+    21300002: Fuego 1_1
+    21300004: Fuego 1_2
+    21300006: Fuego 1_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -82,13 +84,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PJLuzAndar_0
+      name: Fuego 1_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 7
-        width: 38
-        height: 41
+        x: 2
+        y: 32
+        width: 23
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -96,13 +98,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: PJLuzAndar_1
+      name: Fuego 1_1
       rect:
         serializedVersion: 2
-        x: 41
-        y: 7
-        width: 38
-        height: 42
+        x: 29
+        y: 32
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuego 1_2
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Fuego 1_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 23
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
