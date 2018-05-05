@@ -54,6 +54,6 @@ public class Movimiento : ObjetoEscena {
     }
     public override void Muerte()
     {
-        Destroy(gameObject);
+        GameManager.instance.FinPartida();
     }
 }
