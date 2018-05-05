@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Raton : MonoBehaviour {
-
+public class Raton : MonoBehaviour
+{
+    public Texture2D puntero;
 
     public static Raton instance = null;
     void Awake()
@@ -26,6 +27,7 @@ public class Raton : MonoBehaviour {
 
         else
         {
+            Cursor.SetCursor(puntero, Vector2.one * (((float)puntero.width / 2)), CursorMode.Auto);
             Cursor.visible = true;
         }
     }
