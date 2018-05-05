@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    int mejorPuntuacion=0;
     int puntuacion;
     float tiempo, tiempoFinal;
     
@@ -59,4 +60,11 @@ public class GameManager : MonoBehaviour {
     {
         SceneManager.LoadScene("Menu");
     }
+    public int MejorPuntuacion()
+    {
+        if (puntuacion > mejorPuntuacion)
+            mejorPuntuacion = puntuacion;
+        return mejorPuntuacion;
+    }
+    
 }

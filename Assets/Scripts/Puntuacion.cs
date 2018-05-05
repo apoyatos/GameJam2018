@@ -9,6 +9,7 @@ public class Puntuacion : MonoBehaviour {
 	void Start () {
         texto = gameObject.GetComponent<Text>();
         texto.text = "Puntuacion: " + GameManager.instance.Puntuacion();
+        
     }
 	
 }
