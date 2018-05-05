@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114781501857614720}
   - component: {fileID: 61061900691092990}
   - component: {fileID: 114566983377877286}
+  - component: {fileID: 95710791034927076}
   m_Layer: 0
   m_Name: Luz
   m_TagString: Luz
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1534733856767442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -2.43, z: 0}
+  m_LocalPosition: {x: 0.07, y: -2.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +59,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -76,7 +77,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.020531207, y: -0.15398276}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -87,8 +88,25 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.18, y: 2.31}
+  m_Size: {x: 0.80441946, y: 1.0165441}
   m_EdgeRadius: 0
+--- !u!95 &95710791034927076
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1534733856767442}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e3d5a60539559f448aada07919dea9dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114566983377877286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8f50bdbc762074da05cfd572ce4b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 4
-  fuerzaSalto: 400
+  velocidad: 7
+  fuerzaSalto: 550
 --- !u!212 &212811014821712744
 SpriteRenderer:
   m_ObjectHideFlags: 1
