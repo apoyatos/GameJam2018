@@ -21,10 +21,15 @@ public class GeneradorPlataformas : MonoBehaviour {
     List<Plataforma> todasLasPlataformas;
     float tiempo;
 
-    // Use this for initialization
-    void Awake () {
-        
+    void Awake()
+    {
+
         instance = this;
+    }
+
+    // Use this for initialization
+    public void Inicio()
+    {
         posiciones = new Vector2[3];
         numeroInvocaciones = 0;
         float limiteIzquierdo = Camera.main.ViewportToWorldPoint(Camera.main.rect.min).x;
@@ -35,13 +40,10 @@ public class GeneradorPlataformas : MonoBehaviour {
         {
             posiciones[i] = Camera.main.ViewportToWorldPoint(Camera.main.rect.max);
             posiciones[i].x = limiteIzquierdo + diferenciaLimite / 6f * (1 + i * 2);
-            
             posiciones[i].y += col.size.y/2f;
         }  
         Destroy(obj);
-        todasLasPlataformas = new List<Plataforma>();
-        GenerarPlataformasInicio();
-        
+        todasLasPlataformas = new List<Plataforma>();        
     }
 	
     
@@ -91,7 +93,7 @@ public class GeneradorPlataformas : MonoBehaviour {
         numeroInvocaciones++;
     }
 
-    void GenerarPlataformasInicio()
+    public void GenerarPlataformasInicio()
     {
         Vector2 vectorAbajo = Vector2.down * distanciaEntrePlataformas;
         int i = 1;
