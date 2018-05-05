@@ -6,15 +6,19 @@ public class Movimiento : ObjetoEscena {
 
     public float velocidad;
     public float fuerzaSalto;
+    public AudioClip sonidoSalto;
+    public float volumenSalto;
 
     Rigidbody2D rb;
     int puedeSaltar=0;//0 en tierra 1 en el aire y puede saltar 2 no puede saltar
     Animator animaciones;
+    IEnumerator sonSalto;
 
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         animaciones = GetComponent<Animator>();
-	}
+        sonSalto = SoundManager.instance.ReproducirSonido(sonidoSalto, volumenSalto);
+    }
 	
     void ControlJugador()
     {
@@ -23,6 +27,7 @@ public class Movimiento : ObjetoEscena {
         animaciones.SetFloat("x", rb.velocity.x);
         if (Input.GetKeyDown(KeyCode.W) && puedeSaltar < 2)
         {
+            sonSalto.MoveNext();
             animaciones.SetBool("salto", true);
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, fuerzaSalto));

@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnergiaBehaviour : Caer {
-   
+
+    public AudioClip sonidoEnergia;
+    public float volumenEnergia;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Luz")
         {
-            EnergyManager.instance.SumaEnergia();
+        SoundManager.instance.ReproducirSonido(sonidoEnergia, volumenEnergia);
+        EnergyManager.instance.SumaEnergia();
             Destroy(gameObject);
         }
     }

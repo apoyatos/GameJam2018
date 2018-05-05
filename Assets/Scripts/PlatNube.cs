@@ -3,28 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatNube : Plataforma {
-
-
     
     public float tempDestruccion = 3f;
-    Color platColor;
-    
     public Color alpha;
+    public AudioClip sonidoDesvanecerse;
+    public float volumenDesvanecerse;
+
+    bool tocada = false;
 
 	// Use this for initialization
 	void Start ()
     {
         alpha = GetComponent<SpriteRenderer>().color;
         alpha.a = 1;
-        
-        
 	}
 	
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.collider.tag == "Luz")
+        if(!tocada && col.collider.tag == "Luz")
         {
+            SoundManager.instance.ReproducirSonido(sonidoDesvanecerse, volumenDesvanecerse);
             Reducir();
+            tocada = true;
         }
     }
 
