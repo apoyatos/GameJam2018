@@ -46,7 +46,8 @@ public class SoundManager : MonoBehaviour {
         
     void ReproducirMusica(AudioClip sonido, float volumen)
     {
-        Destroy(musica.gameObject);
+        if(musica!=null)
+            Destroy(musica.gameObject);
         musica = Instantiate(ejemplo);
         musica.loop = true;
         musica.volume = volumenMusicaJuego;
