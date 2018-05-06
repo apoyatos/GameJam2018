@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainCamera : MonoBehaviour {
+public class CameraCA : MonoBehaviour {
 
     Rect rect;
 	// Use this for initialization
