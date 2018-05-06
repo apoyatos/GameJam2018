@@ -19,11 +19,18 @@ public class EnergyManager : MonoBehaviour {
         barraEnergia.maxValue = energiaInicial;
 	}
 
-
-    public void RestaEnergia()
+    public void AtaqueSombra()
     {
         if (actual > 0)
             actual--;
+
+        else
+            GameManager.instance.FinPartida();
+    }
+    public void RestaEnergia()
+    {
+        if (actual > 0)
+            actual-=5;
 
         else
             GameManager.instance.FinPartida();
@@ -31,7 +38,7 @@ public class EnergyManager : MonoBehaviour {
     }
     public void SumaEnergia()
     {
-        actual++;
+        actual+=5;
     }
     public int EnergiaActual()
     {

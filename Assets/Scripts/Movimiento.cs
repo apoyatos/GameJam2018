@@ -32,7 +32,7 @@ public class Movimiento : ObjetoEscena {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, fuerzaSalto));
             puedeSaltar += 1;
-            EnergyManager.instance.RestaEnergia();
+            EnergyManager.instance.AtaqueSombra();
         }
         
     }

@@ -25,7 +25,7 @@ public class InteraccionSombra : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            EnergyManager.instance.RestaEnergia();
+            EnergyManager.instance.AtaqueSombra();
             SombraSon.MoveNext();
             if (dentro)
             {
