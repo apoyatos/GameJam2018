@@ -10,6 +10,7 @@ public class SoundManager : MonoBehaviour {
     public AudioClip musicaJuego;
     public float volumenMusicaJuego;
 
+
     AudioSource musica;
 
     void Awake()
@@ -18,14 +19,15 @@ public class SoundManager : MonoBehaviour {
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            ReproducirMusica(musicaJuego, volumenMusicaJuego);
         }
         else
             Destroy(gameObject);
-        ReproducirMusica(musicaJuego, volumenMusicaJuego);
+        
 
     }
 
-        
+
     void ReproducirMusica(AudioClip sonido, float volumen)
     {
         musica = Instantiate(ejemplo);
@@ -34,10 +36,7 @@ public class SoundManager : MonoBehaviour {
         musica.clip = sonido;
         musica.Play();
         DontDestroyOnLoad(musica);
-        
-        
     }
-
 
     public IEnumerator ReproducirSonido(AudioClip audio, float volumen)
     {

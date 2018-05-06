@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 50670041636021112}
   - component: {fileID: 198559023120936454}
   - component: {fileID: 199261536505204822}
+  - component: {fileID: 114816958429513902}
   m_Layer: 0
   m_Name: Energia
   m_TagString: Untagged
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1344811507657466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.979872, y: 10.16, z: 0}
+  m_LocalPosition: {x: 6.6629276, y: 11.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,7 +82,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -102,8 +103,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadCaida: 0
-  sonidoEnergia: {fileID: 8300000, guid: 7eb8e559a5fa67d488ee6a3614090884, type: 3}
-  volumenEnergia: 20
+  sonidoEnergia: {fileID: 8300000, guid: 37cad6f6cb87f134486528c451d7e853, type: 3}
+  volumenEnergia: 0.5
+--- !u!114 &114816958429513902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344811507657466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e84ce7b4d031f4d9a74d9ce083cec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidadCaida: 0
 --- !u!198 &198559023120936454
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -164,7 +177,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 345035596
+  randomSeed: -1931609492
   InitialModule:
     serializedVersion: 3
     enabled: 1

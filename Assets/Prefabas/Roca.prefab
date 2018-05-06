@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 58151404546130006}
   - component: {fileID: 199049976454855574}
   - component: {fileID: 198507553425165116}
-  - component: {fileID: 95605625746236112}
+  - component: {fileID: 95365061604805060}
   m_Layer: 0
   m_Name: Roca
   m_TagString: Roca
@@ -87,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1798568853414298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.671057, y: 10.627434, z: 0}
+  m_LocalPosition: {x: 4.3416686, y: 12.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4794686504359080}
@@ -140,10 +140,10 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.21371716}
+  m_Offset: {x: 0, y: -0.36}
   serializedVersion: 2
-  m_Radius: 0.3137172
---- !u!95 &95605625746236112
+  m_Radius: 0.63
+--- !u!95 &95365061604805060
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -152,7 +152,7 @@ Animator:
   m_GameObject: {fileID: 1798568853414298}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2260c77d7a819ec44930277b26824b9b, type: 2}
+  m_Controller: {fileID: 9100000, guid: cc722858ee49f3a4ab49abc745c3a7ea, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -10469,12 +10469,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c6278ceda3f46b44e80df7b07552c91e, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 3a39d2771fc19b84cbcd6264c5c4e742, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.71875, y: 1}
+  m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

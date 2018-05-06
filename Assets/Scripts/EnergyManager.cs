@@ -31,7 +31,7 @@ public class EnergyManager : MonoBehaviour {
     }
     public void SumaEnergia()
     {
-        actual+=5;
+        actual++;
     }
     public int EnergiaActual()
     {

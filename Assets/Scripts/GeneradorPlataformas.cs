@@ -55,24 +55,33 @@ public class GeneradorPlataformas : MonoBehaviour {
         {
             case 0:
                 aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[0], Quaternion.identity);
+                aux1.CambiarSprite(FormaPlataforma.abiertaPorLaIzquierda);
                 break;
             case 1:
                 aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[1], Quaternion.identity);
+                aux1.CambiarSprite(FormaPlataforma.cerradaPorAmbosLados);
                 break;
             case 2:
                 aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[2], Quaternion.identity);
+                aux1.CambiarSprite(FormaPlataforma.abiertaPorLaDerecha);
                 break;
             case 3:
                 aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[0], Quaternion.identity);
                 aux2 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[1], Quaternion.identity);
+                aux1.CambiarSprite(FormaPlataforma.abiertaPorAmbosLados);
+                aux2.CambiarSprite(FormaPlataforma.abiertaPorLaIzquierda);
                 break;
             case 4:
                 aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[0], Quaternion.identity);
                 aux2 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[2], Quaternion.identity);
+                aux1.CambiarSprite(FormaPlataforma.abiertaPorLaIzquierda);
+                aux2.CambiarSprite(FormaPlataforma.abiertaPorLaDerecha);
                 break;
             default:
                 aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[1], Quaternion.identity);
                 aux2 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[2], Quaternion.identity);
+                aux1.CambiarSprite(FormaPlataforma.abiertaPorLaDerecha);
+                aux2.CambiarSprite(FormaPlataforma.abiertaPorAmbosLados);
                 break;
         }
         todasLasPlataformas.Add(aux1);
@@ -105,28 +114,36 @@ public class GeneradorPlataformas : MonoBehaviour {
             switch (Random.Range(0, 5))
             {
                 case 0:
-                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[0]+vectorAbajo*i, Quaternion.identity);
+                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[0] + Vector2.down*distanciaEntrePlataformas*i, Quaternion.identity);
+                    aux1.CambiarSprite(FormaPlataforma.abiertaPorLaIzquierda);
                     break;
                 case 1:
-                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[1] + vectorAbajo * i, Quaternion.identity);
+                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[1] + Vector2.down * distanciaEntrePlataformas * i, Quaternion.identity);
+                    aux1.CambiarSprite(FormaPlataforma.cerradaPorAmbosLados);
                     break;
                 case 2:
-                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[2] + vectorAbajo * i, Quaternion.identity);
+                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[2] + Vector2.down * distanciaEntrePlataformas * i, Quaternion.identity);
+                    aux1.CambiarSprite(FormaPlataforma.abiertaPorLaDerecha);
                     break;
                 case 3:
-                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[0] + vectorAbajo * i, Quaternion.identity);
-                    aux2 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[1] + vectorAbajo * i, Quaternion.identity);
+                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[0] + Vector2.down * distanciaEntrePlataformas * i, Quaternion.identity);
+                    aux2 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[1] + Vector2.down * distanciaEntrePlataformas * i, Quaternion.identity);
+                    aux1.CambiarSprite(FormaPlataforma.abiertaPorAmbosLados);
+                    aux2.CambiarSprite(FormaPlataforma.abiertaPorLaIzquierda);
                     break;
                 case 4:
-                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[0] + vectorAbajo * i, Quaternion.identity);
-                    aux2 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[2] + vectorAbajo * i, Quaternion.identity);
+                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[0] + Vector2.down * distanciaEntrePlataformas * i, Quaternion.identity);
+                    aux2 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[2] + Vector2.down * distanciaEntrePlataformas * i, Quaternion.identity);
+                    aux1.CambiarSprite(FormaPlataforma.abiertaPorLaIzquierda);
+                    aux2.CambiarSprite(FormaPlataforma.abiertaPorLaDerecha);
                     break;
                 default:
-                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[1] + vectorAbajo * i, Quaternion.identity);
-                    aux2 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[2] + vectorAbajo * i, Quaternion.identity);
+                    aux1 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[1] + Vector2.down * distanciaEntrePlataformas * i, Quaternion.identity);
+                    aux2 = Instantiate(Random.Range(0f, 1f) < probabilidadNube ? nube : suelo, posiciones[2] + Vector2.down * distanciaEntrePlataformas * i, Quaternion.identity);
+                    aux1.CambiarSprite(FormaPlataforma.abiertaPorLaDerecha);
+                    aux2.CambiarSprite(FormaPlataforma.abiertaPorAmbosLados);
                     break;
             }
-
             todasLasPlataformas.Add(aux1);
 
             if (aux2 != null)

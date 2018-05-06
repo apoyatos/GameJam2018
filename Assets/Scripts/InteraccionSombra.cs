@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteraccionSombra : MonoBehaviour {
+public class InteraccionSombra : MonoBehaviour
+{
 
     bool dentro;
     GameObject roca;
@@ -20,7 +21,8 @@ public class InteraccionSombra : MonoBehaviour {
         SombraSon = SoundManager.instance.ReproducirSonido(sombraSonido, sombraVolumen);
     }
 
-    void Update () {
+    void FixedUpdate()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             EnergyManager.instance.RestaEnergia();
@@ -29,19 +31,19 @@ public class InteraccionSombra : MonoBehaviour {
             {
                 Destroy(roca);
                 rocaSon.MoveNext();
-                GameManager.instance.SumaPuntos();
+                GameManager.instance.SumaPuntos(GameManager.instance.puntosPorDestruirRocas);
 
             }
         }
-           
+
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.CompareTag("Roca") && !dentro)
         {
-           roca = col.gameObject;
-           dentro = true;
+            roca = col.gameObject;
+            dentro = true;
         }
     }
 

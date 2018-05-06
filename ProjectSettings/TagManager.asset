@@ -11,6 +11,8 @@ TagManager:
   - Suelo
   - Pies
   - Cabeza
+  - Borde
+  - ZonaMuerte
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Sombra
+  - Pared
   - 
   - 
   - 

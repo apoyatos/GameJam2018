@@ -18,7 +18,7 @@ public class PlatNubeDetecta: MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Cabeza")
+        if (other.tag == "Luz")
         {
             colisionPlataforma.enabled = false;
         }
@@ -26,7 +26,7 @@ public class PlatNubeDetecta: MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.tag == "Pies")
+        if(other.tag == "Luz")
         {
             colisionPlataforma.enabled = true;
         }

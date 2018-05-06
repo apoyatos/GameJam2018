@@ -9,13 +9,13 @@ public class AnimacionSombra : MonoBehaviour {
     Animator anim;
     Rigidbody2D rb2D;
 
-    private void Start()
+    void Start()
     {
         anim = GetComponent<Animator>();
         rb2D = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(0))
         {

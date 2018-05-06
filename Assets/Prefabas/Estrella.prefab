@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212217817501844794}
   - component: {fileID: 58279342220434726}
   - component: {fileID: 50363574309161712}
-  - component: {fileID: 114318379523559536}
+  - component: {fileID: 114476695428157030}
   m_Layer: 0
   m_Name: Estrella
   m_TagString: Untagged
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &114318379523559536
+--- !u!114 &114476695428157030
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,10 +86,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210681640241072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2480ab41afee2740b921f648ce1f28d, type: 3}
+  m_Script: {fileID: 11500000, guid: 207c713088adefd4a86c11b39e87d12c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadCaida: 0
+  sprites:
+  - {fileID: 21300000, guid: aa4c15ef9793e8344bcf513e9e6b72f5, type: 3}
+  - {fileID: 21300000, guid: 1bfe846eebcb926408b8f9cbdf2fab99, type: 3}
+  - {fileID: 21300000, guid: 6625cfa81adc6504cac83c0283493ec1, type: 3}
+  - {fileID: 21300000, guid: 4a05275f80c31eb4db6e671a4e47bfee, type: 3}
+  - {fileID: 21300000, guid: 80ca23a2591c70048889acdf635a5f59, type: 3}
+  - {fileID: 21300000, guid: 07bd4afd2831a57428a238ac18b25731, type: 3}
 --- !u!212 &212217817501844794
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -123,7 +130,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

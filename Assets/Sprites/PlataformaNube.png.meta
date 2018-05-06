@@ -1,12 +1,16 @@
 fileFormatVersion: 2
 guid: 69c99ef2432ca0e4b9dced9f01af2f15
-timeCreated: 1525505027
+timeCreated: 1525517070
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PlataformaNube_0
-    21300002: PlataformaNube_1
-    21300004: PlataformaNube_2
+    21300000: PlataformaMolde_0
+    21300002: PlataformaMolde_1
+    21300004: PlataformaMolde_2
+    21300006: PlataformaNube_0
+    21300008: PlataformaNube_1
+    21300010: PlataformaNube_2
+    21300012: PlataformaNube_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -49,7 +53,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -79,6 +83,26 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -87,11 +111,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 48
         width: 80
-        height: 26
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -101,11 +125,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 31
         width: 80
-        height: 26
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -115,11 +139,25 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 15
+        width: 80
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlataformaNube_3
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 80
-        height: 26
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

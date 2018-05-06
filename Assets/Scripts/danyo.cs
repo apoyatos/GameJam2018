@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class danyo : MonoBehaviour {
+public class danyo : MonoBehaviour
+{
 
     public AudioClip rocaSonido;
     public float rocaVolumen;

@@ -28,6 +28,7 @@ public class GeneratorManager : MonoBehaviour {
         {
             yield return 0;
         }
+        GameManager.instance.IniciarCronometro();
         GeneradorPlataformas.instance.GenerarPlataformas();
         for (int i = 0; i < GeneradorFondo.instance.Length; i++)
         {

@@ -6,7 +6,8 @@ public class generadorObjetos : MonoBehaviour {
 
     static public generadorObjetos[] instance;
 
-    public float porcentajeDesviacionVelocidad;
+    public float porcentajeDesviacionVelocidadMinimo;
+    public float porcentajeDesviacionVelocidadMaximo;
     public float porcentajeDesviacionTiempo;
     public float multiplicadorFrecuencia;
     public Caer objeto;
@@ -31,7 +32,7 @@ public class generadorObjetos : MonoBehaviour {
     public void GenerarObjeto()
     {
         Caer aux = Instantiate(objeto);
-        float velocidadAuxiliar = GeneradorPlataformas.instance.distanciaEntrePlataformas/GeneradorPlataformas.instance.Tiempo()*Random.Range(1f-porcentajeDesviacionVelocidad,1f+porcentajeDesviacionVelocidad);
+        float velocidadAuxiliar = GeneradorPlataformas.instance.distanciaEntrePlataformas / GeneradorPlataformas.instance.Tiempo() * Random.Range(1f + porcentajeDesviacionVelocidadMinimo, 1f + porcentajeDesviacionVelocidadMaximo);
         aux.cambiarVelocidad(velocidadAuxiliar);
         Vector2 auxiliar = posicionSuperior;
         auxiliar.x = Random.Range(limiteIzquierdo, limiteDerecho);

@@ -54,6 +54,8 @@ public class Movimiento : ObjetoEscena {
     }
     public override void Muerte()
     {
+        Destroy(gameObject);
+        Destroy(GameObject.FindGameObjectWithTag("Sombra"));
         GameManager.instance.FinPartida();
     }
 }

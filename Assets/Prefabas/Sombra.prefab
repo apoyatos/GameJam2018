@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 114427489249912486}
   - component: {fileID: 114154521522297796}
   - component: {fileID: 212853720045871548}
+  - component: {fileID: 58692891265368292}
   - component: {fileID: 50292605640662912}
   - component: {fileID: 95914998218485678}
-  - component: {fileID: 114598793050922914}
-  - component: {fileID: 58064499320154456}
+  - component: {fileID: 114840628147222110}
   m_Layer: 0
   m_Name: Sombra
   m_TagString: Sombra
@@ -66,7 +66,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &58064499320154456
+--- !u!58 &58692891265368292
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -109,10 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60050afb0d1034140b5f0932c226c383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rocaSonido: {fileID: 8300000, guid: 37958442a09ee2f458d454e8dfcab3a7, type: 3}
-  rocaVolumen: 3
-  sombraSonido: {fileID: 8300000, guid: 8228407c6e4eb274ab4cd48019654f34, type: 3}
-  sombraVolumen: 3
+  rocaSonido: {fileID: 8300000, guid: dc49e92f7d15dea4c834082bdfff9356, type: 3}
+  rocaVolumen: 0.5
+  sombraSonido: {fileID: 8300000, guid: 10dadaf8b1fb737449b07eae6624e0e9, type: 3}
+  sombraVolumen: 0.5
 --- !u!114 &114427489249912486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   smooth: 0.1
---- !u!114 &114598793050922914
+--- !u!114 &114840628147222110
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
