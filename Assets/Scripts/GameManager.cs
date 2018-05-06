@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour {
     }
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name == "Juego" && Input.GetKeyDown(KeyCode.Escape))
+        if (SceneManager.GetActiveScene().name == "Juego" && Input.GetKeyDown(KeyCode.Escape) && !PanelFin.Activa())
             Pausa();
     }
 

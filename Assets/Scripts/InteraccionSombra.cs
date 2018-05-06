@@ -29,7 +29,7 @@ public class InteraccionSombra : MonoBehaviour
             SombraSon.MoveNext();
             if (dentro)
             {
-                Destroy(roca);
+                roca.GetComponent<RocaBehaviour>().Destruir();
                 rocaSon.MoveNext();
                 GameManager.instance.SumaPuntos(GameManager.instance.puntosPorDestruirRocas);
 

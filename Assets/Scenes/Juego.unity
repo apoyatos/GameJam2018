@@ -500,10 +500,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9f4e7e4232a9f40a565a2ef01738b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  porcentajeDesviacionVelocidadMinimo: 0.1
-  porcentajeDesviacionVelocidadMaximo: 0.5
-  porcentajeDesviacionTiempo: 0.5
-  multiplicadorFrecuencia: 1
+  porcentajeDesviacionVelocidadMinimo: 1.5
+  porcentajeDesviacionVelocidadMaximo: 4
+  porcentajeDesviacionTiempo: 0.2
+  multiplicadorFrecuencia: 1.25
   objeto: {fileID: 114418605163703038, guid: ed9ca5a42f6d83e42a7bb133d7362147, type: 2}
 --- !u!61 &365451210
 BoxCollider2D:
@@ -918,6 +918,8 @@ GameObject:
   - component: {fileID: 802315132}
   - component: {fileID: 802315131}
   - component: {fileID: 802315134}
+  - component: {fileID: 802315136}
+  - component: {fileID: 802315135}
   m_Layer: 5
   m_Name: Continuar
   m_TagString: Untagged
@@ -1040,6 +1042,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba2418664fa29247afb17d85129a265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &802315135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802315129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 802315136}
+          m_MethodName: Entrar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 802315136}
+          m_MethodName: Salir
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &802315136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802315129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae9211cf7926f544b005fa5ab500d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &851099535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,6 +1179,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4774966088470164, guid: 57b95d27c9feacd47967a9222d8df9af, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534733856767442, guid: 57b95d27c9feacd47967a9222d8df9af, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1296,6 +1360,8 @@ GameObject:
   - component: {fileID: 1224902705}
   - component: {fileID: 1224902704}
   - component: {fileID: 1224902703}
+  - component: {fileID: 1224902708}
+  - component: {fileID: 1224902707}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1418,6 +1484,64 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1224902701}
+--- !u!114 &1224902707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224902701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1224902708}
+          m_MethodName: Entrar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1224902708}
+          m_MethodName: Salir
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1224902708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1224902701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae9211cf7926f544b005fa5ab500d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1277413628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,9 +1595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d51ee1bd24cc984abdf3377447c29c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probabilidadNube: 0.9
-  tiempoDeCreacionInicial: 2
-  tiempoMinimo: 1
+  probabilidadNube: 0.2
+  tiempoDeCreacionInicial: 2.2
+  tiempoMinimo: 1.2
   porcentajeHastaAlcanzarElNumeroDeInvoaciones: 0.9
   numeroDeInvocacionesHastaAlcanzarElPorcentaje: 50
   distanciaEntrePlataformas: 4
@@ -1562,10 +1686,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9f4e7e4232a9f40a565a2ef01738b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  porcentajeDesviacionVelocidadMinimo: 0.1
-  porcentajeDesviacionVelocidadMaximo: 0.5
-  porcentajeDesviacionTiempo: 0.5
-  multiplicadorFrecuencia: 1
+  porcentajeDesviacionVelocidadMinimo: 1
+  porcentajeDesviacionVelocidadMaximo: 3
+  porcentajeDesviacionTiempo: 0.3
+  multiplicadorFrecuencia: 0.5
   objeto: {fileID: 114816958429513902, guid: 4198a787c0beb12409eed82a6d6c5ab1, type: 2}
 --- !u!61 &1329847583
 BoxCollider2D:
@@ -1965,6 +2089,8 @@ GameObject:
   - component: {fileID: 1748062436}
   - component: {fileID: 1748062435}
   - component: {fileID: 1748062434}
+  - component: {fileID: 1748062439}
+  - component: {fileID: 1748062438}
   m_Layer: 5
   m_Name: VolverAMenu
   m_TagString: Untagged
@@ -2087,6 +2213,64 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1748062432}
+--- !u!114 &1748062438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1748062432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1748062439}
+          m_MethodName: Entrar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1748062439}
+          m_MethodName: Salir
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1748062439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1748062432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae9211cf7926f544b005fa5ab500d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1823298977
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2326,8 @@ GameObject:
   - component: {fileID: 1839157334}
   - component: {fileID: 1839157333}
   - component: {fileID: 1839157332}
+  - component: {fileID: 1839157337}
+  - component: {fileID: 1839157336}
   m_Layer: 5
   m_Name: VolverAJugar
   m_TagString: Untagged
@@ -2264,6 +2450,64 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1839157330}
+--- !u!114 &1839157336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839157330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1839157337}
+          m_MethodName: Entrar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1839157337}
+          m_MethodName: Salir
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1839157337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839157330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae9211cf7926f544b005fa5ab500d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1934300699
 GameObject:
   m_ObjectHideFlags: 0

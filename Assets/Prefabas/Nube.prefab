@@ -155,13 +155,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9ff0884f3f18546b507f507a47cb4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abiertaPorLaIzquierda: {fileID: 21300012, guid: 5849927a3f41a1a459c7bfc0ea3a0d01,
+  abiertaPorLaIzquierda: {fileID: 21300012, guid: 69c99ef2432ca0e4b9dced9f01af2f15,
     type: 3}
-  abiertaPorLaDerecha: {fileID: 21300010, guid: 5849927a3f41a1a459c7bfc0ea3a0d01,
+  abiertaPorLaDerecha: {fileID: 21300010, guid: 69c99ef2432ca0e4b9dced9f01af2f15,
     type: 3}
-  abiertaPorAmbosLados: {fileID: 21300008, guid: 5849927a3f41a1a459c7bfc0ea3a0d01,
+  abiertaPorAmbosLados: {fileID: 21300008, guid: 69c99ef2432ca0e4b9dced9f01af2f15,
     type: 3}
-  cerradaPorAmbosLados: {fileID: 21300006, guid: 5849927a3f41a1a459c7bfc0ea3a0d01,
+  cerradaPorAmbosLados: {fileID: 21300006, guid: 69c99ef2432ca0e4b9dced9f01af2f15,
     type: 3}
 --- !u!212 &212502347622258802
 SpriteRenderer:
@@ -205,7 +205,7 @@ SpriteRenderer:
   m_Size: {x: 5, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!251 &251783562118395876
 PlatformEffector2D:
