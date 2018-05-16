@@ -6,6 +6,6 @@ public class Ventana : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        Screen.SetResolution(720, 1000, false);
+        Screen.SetResolution(600, 900, false);
 	}
 }
